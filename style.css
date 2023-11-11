@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@600&family=Roboto:wght@400;700&display=swap');
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #ffffff;
+  background-image: linear-gradient(45deg, #ffffff 0%, #ffffff 52%, #222222 90%);
+  
+  font-family: 'Playpen Sans', cursive;
+}
+
+.choiceBtn {
+  height: 50px;
+  width: 200px;
+  position: relative;
+  background-color: transparent;
+  cursor: pointer;
+  border: 2px solid #252525;
+  overflow: hidden;
+  border-radius: 30px;
+  color: #333;
+  transition: all 0.5s ease-in-out;
+}
+
+.choiceBtn {
+  z-index: 1;
+  font-weight: 800;
+  letter-spacing: 4px;
+}
+
+.choiceBtn::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: all 0.5s ease-in-out;
+  background-color: #333;
+  border-radius: 30px;
+  visibility: hidden;
+  height: 10px;
+  width: 10px;
+  z-index: -1;
+}
+
+.choiceBtn:hover {
+  box-shadow: 1px 1px 200px #252525;
+  color: #fff;
+  border: none;
+}
+
+.choiceBtn:hover::after {
+  visibility: visible;
+  transform: scale(100) translateX(2px);
+}
